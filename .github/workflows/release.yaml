@@ -45,7 +45,7 @@ jobs:
         run: ct install
 
   release:
-    needs: lint-test
+    # needs: lint-test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
