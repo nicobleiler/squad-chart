@@ -9,6 +9,6 @@ entries:
     name: squad
     type: application
     urls:
-    - https://github.com/nicobleiler/squad-chart/charts/squad-0.1.0.tgz
+    - https://github.com/nicobleiler/squad-chart/squad-0.1.0.tgz
     version: 0.1.0
 generated: "2021-10-19T22:16:58.4094115+02:00"
