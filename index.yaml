@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   squad:
   - apiVersion: v2
+    appVersion: 1.16.1
+    created: "2021-10-19T21:29:54.035922769Z"
+    description: A Helm chart for running a Squad server in a cluster
+    digest: 60df4b10051c61f1d9673f117ad9955894876aa14ef8964bcdae5ab8c40ce7f6
+    name: squad
+    type: application
+    urls:
+    - https://github.com/nicobleiler/squad-chart/releases/download/squad-0.1.1/squad-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2021-10-19T22:16:58.4104108+02:00"
     description: A Helm chart for Kubernetes
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/nicobleiler/squad-chart/squad-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-19T22:16:58.4094115+02:00"
+generated: "2021-10-19T21:29:54.035931369Z"
