@@ -1,6 +1,6 @@
 apiVersion: v2
 name: squad
-description: A Helm chart for running a Squad server in a cluster
+description: Work in progress, not functional. A Helm chart for running a Squad server in a cluster.
 keywords:
 - game
 - server
