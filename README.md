@@ -1,6 +1,11 @@
 # Squad Server Chart
 The first beta release includes a persistent volume and a ClusterIP Service
 https://artifacthub.io/packages/helm/squad/squad
+## Installation
+### Add repository
+`helm repo add squad https://nicobleiler.github.io/squad-chart`
+### Install chart
+`helm install my-squad squad/squad --version 1.0.0-beta`
 ## Expose using nginx ingress
 ```yaml
 apiVersion: v1
