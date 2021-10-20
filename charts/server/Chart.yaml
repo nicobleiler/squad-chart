@@ -14,5 +14,5 @@ annotations:
       url: https://github.com/CM2Walki/Squad
     - name: Image DockerHub
       url: https://hub.docker.com/r/cm2network/squad
-version: 0.1.9
+version: 0.1.10
 appVersion: "2.11"
