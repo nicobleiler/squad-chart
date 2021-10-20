@@ -9,10 +9,10 @@ icon: https://nicobleiler.github.io/squad-chart/icon.jpg
 annotations:
   artifacthub.io/links: |
     - name: Chart source
-      url: https://github.com/nicobleiler/squad
+      url: https://github.com/nicobleiler/squad-chart
     - name: Image source
       url: https://github.com/CM2Walki/Squad
     - name: Image DockerHub
       url: https://hub.docker.com/r/cm2network/squad
-version: 0.1.10
+version: 0.1.11
 appVersion: "2.11"
