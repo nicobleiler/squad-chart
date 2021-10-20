@@ -31,23 +31,14 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: game-1-udp
+            - name: game-udp
               containerPort: 7787
               protocol: UDP
-            - name: game-2-udp
-              containerPort: 7788
-              protocol: UDP
-            - name: query-1-udp
+            - name: query-udp
               containerPort: 27165
               protocol: UDP
-            - name: query-1-tcp
+            - name: query-tcp
               containerPort: 27165
-              protocol: TCP
-            - name: query-2-udp
-              containerPort: 27166
-              protocol: UDP
-            - name: query-2-tcp
-              containerPort: 27166
               protocol: TCP
             - name: rcon-udp
               containerPort: 21114
@@ -57,6 +48,17 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: data
+              mountPath: /home/steam/squad-dedicated/           
+      volumes:
+        - name: data
+        {{- if .Values.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ include "squad.fullname" . }}
+        {{- else }}
+          emptyDir: {}
+        {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

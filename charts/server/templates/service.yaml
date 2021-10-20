@@ -7,13 +7,17 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.game1port }}
-      targetPort: game-1-udp
+    - port: {{ .Values.service.gamePort }}
+      targetPort: game-udp
       protocol: UDP
-      name: game-1-udp
-    - port: {{ .Values.service.game2port }}
-      targetPort: game-2-udp
+      name: game-udp
+    - port: {{ .Values.service.queryPort }}
+      targetPort: query-udp
       protocol: UDP
-      name: game-2-udp
+      name: query-udp
+    - port: {{ .Values.service.queryPort }}
+      targetPort: query-tcp
+      protocol: TCP
+      name: query-tcp
   selector:
     {{- include "squad.selectorLabels" . | nindent 4 }}

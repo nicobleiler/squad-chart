@@ -20,11 +20,15 @@ securityContext: {}
 
 service:
   type: NodePort
-  game1port: 7787
-  game2port: 7788
-  query1port: 27165
-  query2port: 27166
-  rconport: 21114
+  gamePort: 7787
+  queryPort: 27165
+  rconPort: 21114
+
+persistence:
+  enabled: true
+  storageClass: ""
+  accessMode: ReadWriteOnce
+  size: 20Gi
 
 resources: {}
 
