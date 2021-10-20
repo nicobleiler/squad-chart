@@ -26,19 +26,6 @@ service:
   query2port: 27166
   rconport: 21114
 
-livenessProbe:
-  initialDelaySeconds: 30
-  periodSeconds: 5
-  failureThreshold: 10
-  successThreshold: 1
-  timeoutSeconds: 1
-readinessProbe:
-  initialDelaySeconds: 30
-  periodSeconds: 5
-  failureThreshold: 10
-  successThreshold: 1
-  timeoutSeconds: 1
-
 resources: {}
 
 nodeSelector: {}
