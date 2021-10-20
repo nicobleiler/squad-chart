@@ -7,9 +7,13 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
+    - port: {{ .Values.service.game-1-port }}
+      targetPort: game-1-udp
+      protocol: UDP
+      name: game-1-udp
+    - port: {{ .Values.service.game-2-port }}
+      targetPort: game-2-udp
+      protocol: UDP
+      name: game-2-udp
   selector:
     {{- include "squad.selectorLabels" . | nindent 4 }}
