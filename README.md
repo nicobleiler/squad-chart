@@ -1,5 +1,6 @@
 # Squad Server Chart
 The first beta release includes a persistent volume and a ClusterIP Service
+https://artifacthub.io/packages/helm/squad/squad
 ## Expose using nginx ingress
 ```yaml
 apiVersion: v1
