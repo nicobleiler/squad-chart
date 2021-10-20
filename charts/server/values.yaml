@@ -19,12 +19,25 @@ podSecurityContext: {}
 securityContext: {}
 
 service:
-  type: ClusterIP
-  game-1-port: 7787
-  game-2-port: 7788
-  query-1-port: 27165
-  query-2-port: 27166
-  rcon-port: 21114
+  type: NodePort
+  game1port: 7787
+  game2port: 7788
+  query1port: 27165
+  query2port: 27166
+  rconport: 21114
+
+livenessProbe:
+  initialDelaySeconds: 30
+  periodSeconds: 5
+  failureThreshold: 10
+  successThreshold: 1
+  timeoutSeconds: 1
+readinessProbe:
+  initialDelaySeconds: 30
+  periodSeconds: 5
+  failureThreshold: 10
+  successThreshold: 1
+  timeoutSeconds: 1
 
 resources: {}
 
