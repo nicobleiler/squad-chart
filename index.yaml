@@ -3,6 +3,29 @@ entries:
   squad:
   - annotations:
       artifacthub.io/links: |
+        - name: Chart source
+          url: https://github.com/nicobleiler/squad
+        - name: Image source
+          url: https://github.com/CM2Walki/Squad
+        - name: Image DockerHub
+          url: https://hub.docker.com/r/cm2network/squad
+    apiVersion: v2
+    appVersion: "2.11"
+    created: "2021-10-20T07:53:14.51819264Z"
+    description: Work in progress, not functional. A Helm chart for running a Squad
+      server in a cluster.
+    digest: 413888f54a63662677d85971cef61edbc37b91e1fe81305013185c24c5d47972
+    icon: https://nicobleiler.github.io/squad-chart/icon.jpg
+    keywords:
+    - game
+    - server
+    name: squad
+    type: application
+    urls:
+    - https://github.com/nicobleiler/squad-chart/releases/download/squad-0.1.6/squad-0.1.6.tgz
+    version: 0.1.6
+  - annotations:
+      artifacthub.io/links: |
         - name: Image source
           url: https://github.com/CM2Walki/Squad
         - name: Image DockerHub
@@ -84,4 +107,4 @@ entries:
     urls:
     - https://github.com/nicobleiler/squad-chart/releases/download/squad-0.1.1/squad-0.1.1.tgz
     version: 0.1.1
-generated: "2021-10-19T22:39:00.643076573Z"
+generated: "2021-10-20T07:53:14.518748136Z"
