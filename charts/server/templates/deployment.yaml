@@ -50,7 +50,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - name: data
-              mountPath: /home/steam/squad-dedicated/           
+              mountPath: "/home/steam/squad-dedicated"
       volumes:
         - name: data
         {{- if .Values.persistence.enabled }}

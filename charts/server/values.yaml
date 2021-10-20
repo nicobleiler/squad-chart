@@ -14,12 +14,26 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
+podSecurityContext:
+  fsGroup: 1000
 
-securityContext: {}
+securityContext:
+  # Security context settings
+  runAsUser: 1000
+  privileged: true
+
+# initContainers:
+#   - name: do-something
+#     image: busybox
+#     command: ['do', 'something']
+#     volumesMounts:
+#       - name: nfs
+#         mountPath: /mnt/volume
+#         readOnly: true
+initContainers: []
 
 service:
-  type: NodePort
+  type: ClusterIP
   gamePort: 7787
   queryPort: 27165
   rconPort: 21114

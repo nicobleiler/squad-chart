@@ -1,6 +1,6 @@
 apiVersion: v2
 name: squad
-description: Work in progress, not functional. A Helm chart for running a Squad server in a cluster.
+description: A Helm chart for running a Squad server in a cluster.
 keywords:
 - game
 - server
@@ -14,5 +14,5 @@ annotations:
       url: https://github.com/CM2Walki/Squad
     - name: Image DockerHub
       url: https://hub.docker.com/r/cm2network/squad
-version: 0.1.11
+version: 1.0.0-beta
 appVersion: "2.11"
